@@ -2,7 +2,7 @@
 //DB details
 $dbHost = 'localhost';
 $dbUsername = 'root';
-$dbPassword = '52429862';
+$dbPassword = '';
 $dbName = 'carta';
 
 //Create connection and select DB

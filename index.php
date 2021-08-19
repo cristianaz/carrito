@@ -34,7 +34,7 @@ include 'Configuracion.php';
 <div class="panel-body">
     <h1>Mis Productos</h1>
     <a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>
-    <div id="products" class="row list-group">
+    <div id="products" class="row">
         <?php
         //get rows query
         $query = $db->query("SELECT * FROM mis_productos ORDER BY id DESC LIMIT 10");
