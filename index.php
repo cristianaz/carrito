@@ -21,26 +21,6 @@ include 'Configuracion.php';
 </head>
 <body>
 <div class="container">
-<<<<<<< HEAD
-    <h1 class="text-center">Mis Productos</h1>
-    
-=======
-<div class="panel panel-default">
-<div class="panel-heading"> 
-
-<ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="index.php">Inicio</a></li>
-  <li role="presentation"><a href="VerCarta.php">Ver Carta</a></li>
-  <li role="presentation"><a href="Pagos.php">Pagos</a></li>
-</ul>
-</div>
-
-
-
-<div class="panel-body">
-    <h1>Mis Productos</h1>
-    <a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>
->>>>>>> fb4454815601a9ab42e61e87c8425143f8244987
     <div id="products" class="row">
         <?php
         //get rows query
@@ -69,7 +49,7 @@ include 'Configuracion.php';
         <?php } ?>
     </div>
         </div>
- <div class="panel-footer">BaulPHP</div>
+ 
  </div><!--Panek cierra-->
  
 </div>
