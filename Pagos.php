@@ -1,3 +1,5 @@
+
+
 <?php
 // include database configuration file
 include 'Configuracion.php';
@@ -18,12 +20,14 @@ $_SESSION['sessCustomerID'] = 1;
 $query = $db->query("SELECT * FROM clientes WHERE id = ".$_SESSION['sessCustomerID']);
 $custRow = $query->fetch_assoc();
 ?>
+
+<?php include_once "header.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Pagos - PHP Carrito de compras Tutorial</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
@@ -35,16 +39,8 @@ $custRow = $query->fetch_assoc();
     </style>
 </head>
 <body>
-<div class="container">
-<div class="panel panel-default">
-<div class="panel-heading"> 
 
-<ul class="nav nav-pills">
-  <li role="presentation"><a href="index.php">Inicio</a></li>
-  <li role="presentation"><a href="VerCarta.php">Ver Carta</a></li>
-  <li role="presentation" class="active"><a href="Pagos.php">Pagos</a></li>
-</ul>
-</div>
+<div class="container">
 
 <div class="panel-body">
     <h1>Vista previa de la Orden</h1>
@@ -52,7 +48,7 @@ $custRow = $query->fetch_assoc();
     <thead>
         <tr>
             <th>Producto</th>
-            <th>Pricio</th>
+            <th>Precio</th>
             <th>Cantidad</th>
             <th>Sub total</th>
         </tr>
@@ -66,9 +62,9 @@ $custRow = $query->fetch_assoc();
         ?>
         <tr>
             <td><?php echo $item["name"]; ?></td>
-            <td><?php echo '$'.$item["price"].' USD'; ?></td>
+            <td><?php echo 'Q'.$item["price"].' GT'; ?></td>
             <td><?php echo $item["qty"]; ?></td>
-            <td><?php echo '$'.$item["subtotal"].' USD'; ?></td>
+            <td><?php echo 'Q'.$item["subtotal"].'GT'; ?></td>
         </tr>
         <?php } }else{ ?>
         <tr><td colspan="4"><p>No hay articulos en tu carta......</p></td>
@@ -78,7 +74,7 @@ $custRow = $query->fetch_assoc();
         <tr>
             <td colspan="3"></td>
             <?php if($cart->total_items() > 0){ ?>
-            <td class="text-center"><strong>Total <?php echo '$'.$cart->total().' USD'; ?></strong></td>
+            <td class="text-center"><strong>Total <?php echo 'Q'.$cart->total().' GT'; ?></strong></td>
             <?php } ?>
         </tr>
     </tfoot>
@@ -95,8 +91,16 @@ $custRow = $query->fetch_assoc();
         <a href="AccionCarta.php?action=placeOrder" class="btn btn-success orderBtn">Realizar pedido <i class="glyphicon glyphicon-menu-right"></i></a>
     </div>
         </div>
- <div class="panel-footer">BaulPHP</div>
+ 
  </div><!--Panek cierra-->
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<?php include_once "footer.php" ?>
 </body>
 </html>

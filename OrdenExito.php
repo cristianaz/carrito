@@ -1,12 +1,15 @@
+
+
 <?php
 if(!isset($_REQUEST['id'])){
     header("Location: index.php");
 }
 ?>
+<?php include_once "header.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
     <title>Orden Completado - PHP Carrito de Compras</title>
     <meta charset="utf-8">
     <style>
@@ -20,18 +23,16 @@ if(!isset($_REQUEST['id'])){
 <div class="panel panel-default">
 <div class="panel-heading"> 
 
-<ul class="nav nav-pills">
-  <li role="presentation"><a href="index.php">Inicio</a></li>
-</ul>
-</div>
 
-<div class="panel-body">
+
+
 
     <h1>Estado de su Orden</h1>
     <p>Su pedido ha sido enviado exitosamente. La ID del pedido es #<?php echo $_GET['id']; ?></p>
            </div>
- <div class="panel-footer">BaulPHP</div>
+ 
  </div><!--Panek cierra-->
 </div>
+<?php include_once "footer.php" ?>
 </body>
 </html>

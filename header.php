@@ -39,19 +39,22 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="acerca.php">Acerca de <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item  active dropdown">
-                    <a class="nav-link" href="productos.php">Productos <span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="tienda.php">Tienda<span class="sr-only">(current)</span></a>
-                    </li>
-                   
+                        <a class="nav-link" href="index.php">Tienda<span class="sr-only">(current)</span></a>
+                    </li>                   
                 </ul>
             </div>
             <div class="navbar-end">
                 <div class="navbar-item">
                     
                 </div>
+                <div class="navbar-item">
+                    <div class="buttons">
+                    <a href="VerCarta.php" class="button is-success" title="Ver Carta"><i class="fa fa-shopping-cart"></i></a>
+                        </a>
+                    </div>
+                </div>
+                
                 <div class="navbar-item">
                     <div class="buttons">
                         <a target="_blank" rel="noreferrer" href="#" class="button is-primary">
