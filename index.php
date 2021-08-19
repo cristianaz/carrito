@@ -1,4 +1,6 @@
+<?php include_once "header.php" ?>
 <?php
+
 include 'Configuracion.php';
 ?>
 <!DOCTYPE html>
@@ -27,6 +29,8 @@ include 'Configuracion.php';
 </ul>
 </div>
 
+
+
 <div class="panel-body">
     <h1>Mis Productos</h1>
     <a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>
@@ -43,10 +47,10 @@ include 'Configuracion.php';
                     <h4 class="list-group-item-heading"><?php echo $row["name"]; ?></h4>
                     <p class="list-group-item-text"><?php echo $row["description"]; ?></p>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-sm-6">
                             <p class="lead"><?php echo '$'.$row["price"].' USD'; ?></p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-sm-6">
                             <a class="btn btn-success" href="AccionCarta.php?action=addToCart&id=<?php echo $row["id"]; ?>">Agregar a la Carta</a>
                         </div>
                     </div>
